@@ -1,0 +1,17 @@
+language: swift
+
+before_install:
+    - export LANG=en_US.UTF-8
+    - env
+    - locale
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+    - pod --version
+    - pod setup --silent
+    - pod repo update --silent
+
+script:
+    - pod install
+    - pod lib lint
+    - pod install --project-directory=YSRangeSliderExample
+    - xcodebuild -workspace YSRangeSlider.xcworkspace -scheme 'YSRangeSliderExample' -sdk iphonesimulator clean build | xcpretty -c && exit ${PIPESTATUS[0]}
