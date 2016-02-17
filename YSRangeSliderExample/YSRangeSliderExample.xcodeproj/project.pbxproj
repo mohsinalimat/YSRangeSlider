@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1067192EEDFF1A35029F366C /* Pods_YSRangeSliderExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CF2ADB120FACF03AE2003 /* Pods_YSRangeSliderExample.framework */; };
 		CF19ED9C1C63A5EA004A674D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19ED9B1C63A5EA004A674D /* AppDelegate.swift */; };
 		CF19ED9E1C63A5EA004A674D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19ED9D1C63A5EA004A674D /* ViewController.swift */; };
 		CF19EDA11C63A5EA004A674D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF19ED9F1C63A5EA004A674D /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		069AC3D4827E93223A95E091 /* Pods-YSRangeSliderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSRangeSliderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSRangeSliderExample/Pods-YSRangeSliderExample.release.xcconfig"; sourceTree = "<group>"; };
+		8C79419B4EDDE037516A5D62 /* Pods-YSRangeSliderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSRangeSliderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSRangeSliderExample/Pods-YSRangeSliderExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B45CF2ADB120FACF03AE2003 /* Pods_YSRangeSliderExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSRangeSliderExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF19ED981C63A5EA004A674D /* YSRangeSliderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSRangeSliderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF19ED9B1C63A5EA004A674D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF19ED9D1C63A5EA004A674D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1067192EEDFF1A35029F366C /* Pods_YSRangeSliderExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		363B7D10EB20A735E04F968C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B45CF2ADB120FACF03AE2003 /* Pods_YSRangeSliderExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A75BA9278DBAFBBC14189933 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C79419B4EDDE037516A5D62 /* Pods-YSRangeSliderExample.debug.xcconfig */,
+				069AC3D4827E93223A95E091 /* Pods-YSRangeSliderExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF19ED8F1C63A5EA004A674D = {
 			isa = PBXGroup;
 			children = (
 				CF19ED9A1C63A5EA004A674D /* YSRangeSliderExample */,
 				CF19EDAF1C63A5EA004A674D /* YSRangeSliderExampleTests */,
 				CF19ED991C63A5EA004A674D /* Products */,
+				A75BA9278DBAFBBC14189933 /* Pods */,
+				363B7D10EB20A735E04F968C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF19EDB51C63A5EA004A674D /* Build configuration list for PBXNativeTarget "YSRangeSliderExample" */;
 			buildPhases = (
+				1682E31FB482D0442511F302 /* Check Pods Manifest.lock */,
 				CF19ED941C63A5EA004A674D /* Sources */,
 				CF19ED951C63A5EA004A674D /* Frameworks */,
 				CF19ED961C63A5EA004A674D /* Resources */,
+				FEE36DACC55ED955B473A5FC /* Embed Pods Frameworks */,
+				A1291C0EC2C9A5A8EAA9CB2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +219,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1682E31FB482D0442511F302 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1291C0EC2C9A5A8EAA9CB2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSRangeSliderExample/Pods-YSRangeSliderExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE36DACC55ED955B473A5FC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSRangeSliderExample/Pods-YSRangeSliderExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF19ED941C63A5EA004A674D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -276,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -315,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,10 +400,10 @@
 		};
 		CF19EDB61C63A5EA004A674D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C79419B4EDDE037516A5D62 /* Pods-YSRangeSliderExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YSRangeSliderExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = YS.YSRangeSliderExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,10 +412,10 @@
 		};
 		CF19EDB71C63A5EA004A674D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 069AC3D4827E93223A95E091 /* Pods-YSRangeSliderExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YSRangeSliderExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = YS.YSRangeSliderExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,6 +465,7 @@
 				CF19EDB71C63A5EA004A674D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF19EDB81C63A5EA004A674D /* Build configuration list for PBXNativeTarget "YSRangeSliderExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +474,7 @@
 				CF19EDBA1C63A5EA004A674D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

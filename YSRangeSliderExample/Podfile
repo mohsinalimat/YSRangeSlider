@@ -1,0 +1,10 @@
+use_frameworks!
+
+xcodeproj 'YSRangeSliderExample'
+workspace '../YSRangeSlider'
+
+target :YSRangeSliderExample do
+  platform :ios, '8.0'
+  link_with 'YSRangeSliderExample'
+  pod 'YSRangeSlider', :path => '../'
+end

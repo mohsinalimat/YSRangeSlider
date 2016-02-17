@@ -7,4 +7,10 @@
    <FileRef
       location = "group:YSRangeSlider.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:YSRangeSliderExample/Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YSRangeSlider.podspec">
+   </FileRef>
 </Workspace>
