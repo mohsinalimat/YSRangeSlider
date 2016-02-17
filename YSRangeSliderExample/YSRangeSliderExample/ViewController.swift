@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import YSRangeSlider
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var rangeSlider: YSRangeSlider!
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        rangeSlider.delegate = self
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - YSRangeSliderDelegate
+extension ViewController: YSRangeSLiderDelegate {
+    func rangeSliderDidChange(rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue maximumSelectedSelectedValue: CGFloat) {
+        label.text = "From \(minimumSelectedValue) to \(maximumSelectedSelectedValue)"
     }
-
-
 }
 
