@@ -13,4 +13,13 @@
    <FileRef
       location = "group:YSRangeSlider.podspec">
    </FileRef>
+   <FileRef
+      location = "group:YSRangeSlider.jpeg">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
 </Workspace>

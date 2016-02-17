@@ -5,7 +5,11 @@ YSRangeSlider
 [![Pod Platform](http://img.shields.io/cocoapods/p/YSRangeSlider.svg?style=flat)](http://cocoadocs.org/docsets/YSRangeSlider/)
 [![Pod License](http://img.shields.io/cocoapods/l/YSRangeSlider.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-YSRangeSlider
+Configurable range slider for iOS (IBInspectable and IBDesignable)
+
+<p align="center" >
+    <img src="YSRangeSlider.jpeg" title="YSRangeSlider demo image" float=center width=400>
+</p>
 
 ## How to get started
 
