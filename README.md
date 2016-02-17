@@ -11,14 +11,15 @@ YSRangeSlider
 
 ### install via CocoaPods
 ```ruby
-platform :ios, '7.0'
+platform :ios, '8.0'
+use_frameworks!
 pod 'YSRangeSlider'
 ```
 
 ## Requirements
 
-- Xcode4 and above
-- iOS 7.0 or above
+- Xcode 7 and above
+- iOS 8.0 or above
 
 ## Author
 - [Laurentiu Ungur](laurentiu.ungur@yardi.com)
